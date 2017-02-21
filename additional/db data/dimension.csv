@@ -1,0 +1,12 @@
+id,desc,default_visible,searching_tag1,searching_tag2,searching_tag3,searching_tag4,searching_tag5,searching_tag6,searching_tag7,searching_tag8,searching_tag9,searching_tag10,searching_tag11,searching_tag12,searching_tag13,searching_tag14,searching_tag15,searching_tag16,searching_tag17,searching_tag18,searching_tag19,searching_tag20
+10000,"Набор Шампанское",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"show on start",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+102510,"Дольчетто д'Альба а Элизабет",0,вино,ТАИ,БЕЛОЕ,2015,"CASCINA DELLE ROSE",1500,0.75,СУХОЕ,ТИХОЕ,ВЕРНАЧЧА,0,20000,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+102511,"Ланге Неббиоло",0,вино,ДОМ,БЕЛОЕ,2013,CASTELGIOCONDO,2500,0.75,ПОЛУСУХОЕ,ТИХОЕ,ДЖИНЕСТРА,0,20000,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+102514,"Гевюрцтраминер Ванданж Тардив",0,вино,ИСП,КРАСНОЕ,2012,"DOMAINE AMIOT",1900,0.300,СЛАДКОЕ,КРЕПЛЕНОЕ,КАБЕРНЕ,0,20000,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+102521,"Кампанаро Ирпиниа Бьянко",0,вино,ИРЛ,РОЗОВОЕ,2011,FELSINA,3500,0.75,ПОЛУСЛАДКОЕ,ШИПУЧЕЕ,МУСКАТ,0,20000,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+102522,"Фриц'с Рислинг Квалитатсвайн (Рейнхессен)",0,вино,ИТА,КРАСНОЕ,2010,FONGOLI,5500,0.250,ПОЛУСУХОЕ,ШИПУЧЕЕ,ПИНОТАЖ,0,20000,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+102920,"Водка ОНЕГИН",0,"крепкие напитки",РОС,NULL,NULL,ЮПИТЕР_ИНК,1200,0.5,NULL,NULL,NULL,0,30000,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+20000,"Набор Вино",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"show on start",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+30000,"Набор Крепкие Напитки",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"show on start",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+74694,"Шампанское ""Моет и Шандон Дом",0,шампанское,ФРА,РОЗОВОЕ,2012,ФРА-ПУСТО,6500,0.75,ПОЛУСЛАДКОЕ,ШИПУЧЕЕ,РАБОЗО,0,10000,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+74889,"Луи Родерер Кристал Брют белое",0,шампанское,ИТА,БЕЛОЕ,2014,ФРА-ПУСТО,1200,0.75,ПОЛУСУХОЕ,ШИПУЧЕЕ,РИСЛИНГ,0,10000,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL

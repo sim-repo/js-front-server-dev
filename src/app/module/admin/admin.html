@@ -1,0 +1,11 @@
+<div class="admin-common-style">
+  <div *ngIf="buffer">
+      <div class="card-container">
+        <md-card *ngFor="let n of buffer">
+          <md-card-title class="secondary">{{n.title}}</md-card-title>
+          <a [routerLink]="['/news/one/'+n.id]"routerLinkActive="active">[...]</a>
+          <router-outlet></router-outlet>`
+        </md-card>
+      </div>
+  </div>
+</div>

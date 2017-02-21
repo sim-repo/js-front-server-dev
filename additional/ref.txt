@@ -1,0 +1,17 @@
+Dynamic Routing:
+https://angular.io/docs/ts/latest/guide/router.html
+http://angularjs.blogspot.ru/2016/08/angular-2-rc5-ngmodules-lazy-loading.html
+
+
+https://github.com/Longfld/DynamicalRouter/tree/master/app
+http://plnkr.co/edit/18CZVF?p=preview
+https://github.com/angular/angular/issues/11437#issuecomment-245995186
+https://github.com/angular/angular/issues/9527
+https://blog.thoughtram.io/angular/2015/06/16/routing-in-angular-2.html
+https://embed.plnkr.co/wBorFvoG3hfD36iOcNqu/
+https://github.com/davidejones/angular2-routertest/tree/master/src/app/team
+
+
+
+Android:
+https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxhbmRsZXNzb25zfGd4OjNjMjBlNzMwZDUwNmM2YWM

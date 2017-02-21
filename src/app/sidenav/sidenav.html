@@ -1,0 +1,54 @@
+
+<md-nav-list>
+  <div *ngIf="selectedFgroup">
+    <div *ngFor="let g of selectedFgroup">
+      <br>
+      <md-card>
+        <i class="material-icons md-18 md-grey-700">{{g.icon_class}}</i>
+      <span md-line class="app-menu-font">{{g.caption}}</span>
+      <div [ngSwitch]="g.control_type">
+          <div *ngSwitchCase="'checkbox'">
+            <div *ngFor="let f of g.items">
+              <md-checkbox  [(ngModel)]="f.enabled"
+                            (change)="saveAndEmit(f, $event.checked)" >
+                <span class="app-menu-item-font">{{f.value_caption}}</span>
+              </md-checkbox>
+            </div>
+          </div>
+
+          <div *ngSwitchCase="'range checkbox'">
+            <div *ngFor="let f of g.items">
+
+              <md-checkbox  [(ngModel)]="f.enabled"
+                            (change)="saveAndEmit(f, $event.checked)">
+                {{f.value_caption}}
+              </md-checkbox>
+
+            </div>
+          </div>
+
+        <div *ngSwitchCase="'minimum slider'">
+          <div *ngFor="let f of g.items">
+            <md-slider #slider1
+              (change)="saveAndEmit(f, f.x_value>f.value)"
+              thumbLabel
+              [(ngModel)]="f.value"
+              min={{f.min_value}} max={{f.max_value}}></md-slider>{{slider1.value}}
+          </div>
+        </div>
+
+        <div *ngSwitchCase="'maximum slider'">
+          <div *ngFor="let f of g.items">
+            <md-slider #slider2
+                       (change)="saveAndEmit(f, (f.x_value === undefined?0:f.x_value)<=f.value)"
+                       thumbLabel
+                       [(ngModel)]="f.value"
+                       min={{f.min_value}} max={{f.max_value}}></md-slider>{{slider2.value}}
+          </div>
+        </div>
+
+      </div>
+      </md-card>
+    </div>
+  </div>
+</md-nav-list>

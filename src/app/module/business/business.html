@@ -1,0 +1,12 @@
+<div class="bus-common-style">
+  <div *ngIf="buffer">
+    <div class="card-container">
+      <md-card *ngFor="let n of buffer">
+        <md-card-title class="secondary">{{n.desc}}</md-card-title>
+        <a [routerLink]="['/business/'+n.id]"routerLinkActive="active">[детали]</a>
+        <router-outlet></router-outlet>`
+      </md-card>
+    </div>
+  </div>
+</div>
+

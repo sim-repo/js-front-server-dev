@@ -1,0 +1,85 @@
+1. Ловушка #1: такая функция никогда не вернет экземпляр reports, т.к. find( r =>(r.id === id)  )) итогом возвращает неопределенный
+результат из-за условия (r.id === id):
+
+  getById(id: number) {
+    let newsPromise2 = Promise.resolve(this.reports?this.reports:UserReports['']);
+    return newsPromise2
+      .then(reports => reports.find( r =>(r.id === id)  ));
+  }
+лечится так: reports.find( r =>r.id === id  )
+
+
+  
+
+<a md-list-item *ngFor="let f of g.items">
+                  <md-input [(ngModel)]= f.value></md-input>
+                  <span md-line (click)="emitByAction(1,5,'MyFilterItem', f)">{{f.model_fld_name}}</span>
+                </a>
+				
+				
+				 <md-checkbox [(ngModel)]="f.completed" (click)="emitByAction(1,5,'MyFilterItem', f)">
+                {{f.id}}
+              </md-checkbox>
+
+
+2. Есть объект, в котором поле с типом map, как перегнать объект в json?
+Лучший способ, если в функционале не нужен поиск по map, то лучше использовать Array<any>
+
+export class Report{
+   id: number;   
+   params: Array<any>
+}
+..
+
+for(var i=0,len=report.params.length; i<len;i++){
+  let obj = Object.create(null);
+  obj[report.params[i].name] = report.params[i].value;
+  objToJson.params.push(obj);
+ }
+
+
+var jbody = JSON.stringify(objToJson)
+
+
+
+
+3. http-запрос объект типа Observable, это значит, что нельзя запустить запрос http.get/post, если
+не будет подписчика.
+
+
+
+  slider with one-way binding:
+  <br>
+  <md-slider min="1" max="100" tickInterval="auto" #slider2 [value]="val"></md-slider>{{slider2.value}}
+  <br>
+  <input [(ngModel)]="val">
+  <br><br><br>
+
+
+  two-way binding:
+  <br>
+  <md-slider thumbLabel [(ngModel)]="demo"></md-slider>
+  <br>
+  <input [(ngModel)]="demo">
+  <br><br>
+
+  <md-tab-group>
+    <md-tab label="One">
+      <md-slider min="1" max="5" value="3"></md-slider>
+    </md-tab>
+    <md-tab label="Two">
+      <md-slider min="1" max="5" value="3"></md-slider>
+    </md-tab>
+  </md-tab-group>
+
+
+
+<ul>
+    <li *ngFor="let item of menuItems">
+        <span><input type="checkbox" [checked]="item.clickable"   /></span> 
+        <span (click)="item.toggle()">{{ item.name }}</span>
+        <div *ngIf="item.clickable === 0">           
+            <tree-view [menuItems]="item.children"></tree-view>
+        </div>
+    </li>
+</ul>

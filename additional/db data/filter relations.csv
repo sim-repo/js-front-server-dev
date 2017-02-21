@@ -1,0 +1,8 @@
+id,initiator_model_class,model_class_id,filtered_model_class,filter_item_id
+1,Tab,Wine,Dimension,0
+2,Tab,Shampane,Dimension,2
+3,Tab,Vodka,Dimension,4
+4,Dashboard,Main,Dimension,40
+5,Dimension,10000,Dimension,41
+6,Dimension,20000,Dimension,42
+7,Dimension,30000,Dimension,43

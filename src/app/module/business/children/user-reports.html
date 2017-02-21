@@ -1,0 +1,68 @@
+<button md-raised-button (click)="back()" class="simple-button"><i class="fa fa-arrow-circle-left"></i>назад</button>
+
+
+<div *ngIf="report">
+  <div class="rep-common-style">
+      <div class="card-container">
+        <md-card class="md-card1">
+          <md-card-header>{{report.desc}}</md-card-header>
+          <form (ngSubmit)="onSubmit()" [formGroup]="form">
+            <div *ngFor = "let p of report.params">
+              <input formControlName={{p.param_name}} type="text" placeholder={{p.desc}} [(ngModel)]="p.value" value="p.sample">
+            </div>
+            <div class="form-row">
+              <button type="button" [disabled]="!form.valid" (click)="send()">submit</button>
+            </div>
+          </form>
+        </md-card>
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+
+
+        <md-card class="md-card2">
+          <md-card-header>Динамические фильтры</md-card-header>
+          <div *ngIf="gridFilter">
+            <form (ngSubmit)="onSubmit()" [formGroup]="form2">
+              <div *ngFor = "let item of gridFilter.items">
+                <input formControlName={{item.column}} type="text"  placeholder="{{item.column}}" [(ngModel)]="item.filter">
+              </div>
+              <div class="form-row">
+                <button type="button" [disabled]="!form.valid" (click)="doFilter()">submit</button>
+              </div>
+            </form>
+          </div>
+        </md-card>
+
+        <md-card class="md-card3">
+          <div *ngIf="bufout">
+            <md-grid-list cols={{gridFilter.getColumns().length}}  rowHeight="30px"  gutterSize="2px">
+                <md-grid-tile *ngFor="let column of gridFilter.getColumns()">
+                  <md-grid-tile-header>
+                    <a href="#" onclick="return false;" (click)="sort(column)">
+                      <div [ngSwitch]="isSorted(column)">
+                        <div  class="grid">
+                        <div *ngSwitchCase="true"><i class="fa fa-caret-up" aria-hidden="true">{{column}}</i></div>
+                        <div *ngSwitchCase="false"><i class="fa fa-caret-down" aria-hidden="true">{{column}}</i></div>
+                      </div>
+                      </div>
+                    </a>
+                  </md-grid-tile-header>
+                </md-grid-tile>
+                <div *ngFor="let row of bufout | sort : this.sortCol: this.sortAsc | paginate: itemPerPage: currentPage ">
+                  <md-grid-tile *ngFor="let val of row.data">
+                    <div class="cell">
+                      <a href="#" onclick="return false;" (click)="edit(row)">{{val}}</a>
+                    </div>
+                  </md-grid-tile>
+                </div>
+            </md-grid-list>
+            <div *ngIf="getTotalItems()">
+              <pagination [totalItems]="getTotalItems()" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)" [itemsPerPage]="itemPerPage"></pagination>
+            </div>
+          </div>
+        </md-card>
+      </div>
+  </div>
+</div>
+

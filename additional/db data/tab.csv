@@ -1,0 +1,5 @@
+id,caption,searching_tag1,filter_model_class
+admin,Админка,NULL,admin
+api,Интеграция,NULL,api
+business,"Пользовательские Отчеты",NULL,UserReports
+news,Новости,NULL,News

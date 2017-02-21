@@ -1,0 +1,20 @@
+id,model_class,control_type,caption,model_field
+fg_alcohol_type,Dimension,checkbox,"Тип Алкоголя",searching_tag1
+fg_alco_type,Dimension,checkbox,"Тип Вина",searching_tag9
+fg_country,Dimension,checkbox,"Страна Происхождения",searching_tag2
+fg_defvisible,Dimension,checkbox,Скрыть,searching_tag11
+fg_hierarchy,Dimension,checkbox,Иерархии,searching_tag12
+fg_price,Dimension,"range checkbox",Цена,searching_tag6
+fg_producer,Dimension,checkbox,Производитель,searching_tag5
+fg_sort,Dimension,checkbox,"Сорт Винограда",searching_tag10
+fg_sugar,Dimension,checkbox,"Содержание Сахара",searching_tag8
+fg_volume,Dimension,checkbox,"Максимальный Объем",searching_tag7
+fg_wine_color,Dimension,checkbox,Цвет,searching_tag3
+fg_year_maximum,Dimension,"maximum slider","Год Производства",searching_tag4
+fg_year_minimum,Dimension,"minimum slider",,searching_tag4
+news_feature_area,News,checkbox,Модуль,searching_tag2
+news_section,News,checkbox,Раздел,searching_tag1
+reports_changes,UserReports,checkbox,"В порядке изменения",searching_tag4
+reports_freq,UserReports,checkbox,Популярность,searching_tag3
+reports_module,UserReports,checkbox,Модули,searching_tag1
+reports_type,UserReports,checkbox,Тип,searching_tag2

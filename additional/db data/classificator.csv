@@ -1,0 +1,9 @@
+id,name,desc,parent_id,level,clickable
+1000,"Top Menu 1","Desc Top 1 Menu",NULL,1,0
+1100,"Sub Menu 11","Desc Sub Menu 11",1000,2,0
+1110,"Sub Menu 111","Desc Sub Menu 111",1100,3,0
+1111,"Sub Menu 1111","Desc Sub Menu 1111",1110,4,0
+1112,"Sub Menu 1112","Sub Menu 1111",1110,4,0
+1113,"Sub Menu 1113","Sub Menu 1111",1110,4,0
+1200,"Sub Menu 12","Desc Sub Menu 12",1000,2,0
+2000,"Top Menu 2","Desc Top 2 Menu",NULL,1,0

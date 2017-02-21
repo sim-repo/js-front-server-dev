@@ -1,0 +1,67 @@
+id,model_field,type,filter_group_id,value,min_value,max_value,value_caption
+0,searching_tag1,checkbox,fg_alcohol_type,Вино,NULL,NULL,Вино
+2,searching_tag1,checkbox,fg_alcohol_type,Шампанское,NULL,NULL,Шампанское
+4,searching_tag1,checkbox,fg_alcohol_type,"Крепкие Напитки",NULL,NULL,"Крепкие Напитки"
+5,searching_tag2,checkbox,fg_country,ТАИ,NULL,NULL,Тайланд
+6,searching_tag2,checkbox,fg_country,ДОМ,NULL,NULL,Доминикана
+7,searching_tag2,checkbox,fg_country,ИСП,NULL,NULL,Испания
+8,searching_tag2,checkbox,fg_country,ИРЛ,10,100,Ирландия
+9,searching_tag2,checkbox,fg_country,ИТА,101,200,Италия
+10,searching_tag3,checkbox,fg_wine_color,БЕЛОЕ,0,0,Белое
+11,searching_tag3,checkbox,fg_wine_color,КРАСНОЕ,0,0,Красное
+12,searching_tag3,checkbox,fg_wine_color,РОЗОВОЕ,0,0,Розовое
+13,searching_tag4,"maximum slider",fg_year_maximum,NULL,1900,2017,макс.
+14,searching_tag4,"minimum slider",fg_year_minimum,NULL,1900,2017,мин.
+15,searching_tag5,checkbox,fg_producer,"CASCINA DELLE ROSE",NULL,NULL,"CASCINA DELLE ROSE"
+16,searching_tag5,checkbox,fg_producer,CASTELGIOCONDO,NULL,NULL,CASTELGIOCONDO
+17,searching_tag5,checkbox,fg_producer,"DOMAINE AMIOT",NULL,NULL,"DOMAINE AMIOT"
+18,searching_tag5,checkbox,fg_producer,FELSINA,NULL,NULL,FELSINA
+19,searching_tag5,checkbox,fg_producer,FONGOLI,NULL,NULL,FONGOLI
+20,searching_tag6,"range checkbox",fg_price,NULL,0,1500,0..1500
+21,searching_tag6,"range checkbox",fg_price,NULL,1500,3000,1500..3000
+22,searching_tag6,"range checkbox",fg_price,NULL,3000,5000,3000..5000
+23,searching_tag6,"range checkbox",fg_price,NULL,5000,10000,5000..10000
+24,searching_tag6,"range checkbox",fg_price,NULL,10000,15000,10000.15000
+25,searching_tag7,checkbox,fg_volume,0.250,NULL,NULL,0.250
+26,searching_tag7,checkbox,fg_volume,0.300,NULL,NULL,0.300
+27,searching_tag7,checkbox,fg_volume,0.75,NULL,NULL,0.75
+28,searching_tag8,checkbox,fg_sugar,СУХОЕ,NULL,NULL,Сухое
+29,searching_tag8,checkbox,fg_sugar,ПОЛУСУХОЕ,NULL,NULL,Полусухое
+30,searching_tag8,checkbox,fg_sugar,ПОЛУСЛАДКОЕ,NULL,NULL,Полусладкое
+31,searching_tag8,checkbox,fg_sugar,СЛАДКОЕ,NULL,NULL,Сладкое
+32,searching_tag9,checkbox,fg_alco_type,ТИХОЕ,NULL,NULL,Тихое
+33,searching_tag9,checkbox,fg_alco_type,КРЕПЛЕНОЕ,NULL,NULL,Крепленое
+34,searching_tag9,checkbox,fg_alco_type,ШИПУЧЕЕ,NULL,NULL,Шипучее
+35,searching_tag10,checkbox,fg_sort,ВЕРНАЧЧА,NULL,NULL,Верначча
+36,searching_tag10,checkbox,fg_sort,ДЖИНЕСТРА,NULL,NULL,Джинестра
+37,searching_tag10,checkbox,fg_sort,КАБЕРНЕ,NULL,NULL,Каберне
+38,searching_tag10,checkbox,fg_sort,МУСКАТ,NULL,NULL,Мускат
+39,searching_tag10,checkbox,fg_sort,ПИНОТАЖ,NULL,NULL,Пинотаж
+40,searching_tag11,checkbox,fg_defvisible,"show on start",NULL,NULL,NULL
+41,searching_tag12,checkbox,fg_hierarchy,10000,NULL,NULL,NULL
+42,searching_tag12,checkbox,fg_hierarchy,20000,NULL,NULL,NULL
+43,searching_tag12,checkbox,fg_hierarchy,30000,NULL,NULL,NULL
+44,searching_tag1,checkbox,news_section,отчеты,NULL,NULL,отчеты
+45,searching_tag1,checkbox,news_section,интеграция,NULL,NULL,интеграция
+46,searching_tag1,checkbox,news_section,админка,NULL,NULL,админка
+47,searching_tag2,checkbox,news_feature_area,"создание заказов-продажи",NULL,NULL,"создание заказов-продажи"
+48,searching_tag2,checkbox,news_feature_area,"клиентские операции",NULL,NULL,"клиентские операции"
+49,searching_tag2,checkbox,news_feature_area,"клиентские реквизиты",NULL,NULL,"клиентские реквизиты"
+50,searching_tag2,checkbox,news_feature_area,сотрудники,NULL,NULL,сотрудники
+51,searching_tag1,checkbox,reports_module,финансы,NULL,NULL,финансы
+52,searching_tag1,checkbox,reports_module,"продажи и клиенты",NULL,NULL,"продажи и клиенты"
+53,searching_tag1,checkbox,reports_module,"закупки и поставщики",NULL,NULL,"закупки и поставщики"
+54,searching_tag1,checkbox,reports_module,сотрудники,NULL,NULL,сотрудники
+55,searching_tag1,checkbox,reports_module,склад,NULL,NULL,склад
+56,searching_tag2,checkbox,reports_type,справочники,NULL,NULL,справочники
+57,searching_tag2,checkbox,reports_type,операции,NULL,NULL,операции
+58,searching_tag3,checkbox,reports_freq,"часто используемые",NULL,NULL,"часто используемые"
+59,searching_tag3,checkbox,reports_freq,средне,NULL,NULL,средне
+60,searching_tag3,checkbox,reports_freq,редко,NULL,NULL,редко
+61,searching_tag3,checkbox,reports_freq,"не используются давно",NULL,NULL,"не используются давно"
+62,searching_tag4,checkbox,reports_changes,"за последний день",NULL,NULL,"за последний день"
+63,searching_tag4,checkbox,reports_changes,"за последнюю неделю",NULL,NULL,"за последнюю неделю"
+64,searching_tag4,checkbox,reports_changes,"за последний месяц",NULL,NULL,"за последний месяц"
+65,searching_tag4,checkbox,reports_changes,"за последний квартал",NULL,NULL,"за последний квартал"
+66,searching_tag4,checkbox,reports_changes,"за последний год",NULL,NULL,"за последний год"
+67,searching_tag4,checkbox,reports_changes,"за предыдущие годы",NULL,NULL,"за предыдущие годы"

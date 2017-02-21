@@ -1,0 +1,133 @@
+
+md-sidenav-layout.m2app-dark {
+  background: black;
+}
+
+.app-content {
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.app-content md-card {
+  margin: 20px;
+}
+
+.app-sidenav {
+  padding: 10px;
+  min-width: 320px;
+  overflow: hidden;
+  height:100%;
+  background: linear-gradient(#dbdbdb, #dbdbdb);
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.app-content md-checkbox {
+  margin: 10px;
+}
+
+.app-md-toolbar{
+  background: linear-gradient(#b7b7b7, #b7b7b7);
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.48), 0 0px 0px rgba(0,0,0,0.05);
+  height: 10vh;
+  margin: 0px 0px 0px 0px;
+}
+
+.app-toolbar-filler {
+  flex: 1 1 auto;
+}
+
+.app-toolbar-menu {
+  padding: 0 14px 0 14px;
+  color: white;
+}
+
+.app-md-toolbar-footer{
+  background: #e5e5e5;
+  overflow: hidden;
+  position:absolute;
+  bottom:0;
+  height: 1vh;
+}
+
+
+.app-icon-button {
+  box-shadow: none;
+  user-select: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  filter: none;
+  font-weight: normal;
+  height: auto;
+  line-height: inherit;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+}
+
+.app-action {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.app-spinner {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+}
+
+.app-input-icon {
+  font-size: 16px;
+}
+
+.app-list {
+  border: 1px solid rgba(0,0,0,0.12);
+  width: 350px;
+  margin: 20px;
+}
+
+.app-progress {
+  margin: 20px;
+}
+
+
+.app-menu-font{
+  color: #757575;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: x-large;
+}
+
+.app-menu-item-font{
+   color: #9E9E9E;
+   font-style: italic;
+}
+
+
+
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+.material-icons.md-grey-500 { color: #9E9E9E }
+.material-icons.md-grey-600 { color: #757575 }
+.material-icons.md-grey-700 { color: #616161 }
+
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+.material-icons.md-pink { color: #ff4ccb }
+
+
+

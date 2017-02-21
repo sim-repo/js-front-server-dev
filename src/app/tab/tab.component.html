@@ -1,0 +1,14 @@
+
+<nav md-tab-nav-bar aria-label="navigation links" class="md-tab-nav-bar-s">
+  <a md-tab-link
+     *ngFor="let tab of tabs; let i = index"
+     [active]="activeLinkIndex === i"
+     (click)="activeLinkIndex = i; emitByAction(2,0,tab.filter_model_class, tab);"
+     [routerLink]=tab.id>
+    <i class="material-icons">{{tab.icon_class}}</i>
+    {{tab.caption}}
+  </a>
+</nav>
+<router-outlet></router-outlet>
+
+

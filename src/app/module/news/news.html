@@ -1,0 +1,12 @@
+<div class="news-common-style">
+  <div *ngIf="buffer">
+    <div *ngIf="news">
+      <div class="card-container">
+        <md-card *ngFor="let n of buffer" [routerLink]="['/news/one/'+n.id]">
+          <md-card-title class="secondary">{{n.title}}</md-card-title>
+          <router-outlet></router-outlet>
+        </md-card>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,258 @@
+﻿CREATE TABLE `bus action group` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name_UNIQUE` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bus actions` (
+  `action_group_id` int(11) NOT NULL,
+  `action_id` int(11) NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`action_group_id`,`action_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bus classificator` (
+  `id` varchar(10) NOT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `desc` varchar(245) DEFAULT NULL,
+  `parent_id` varchar(10) DEFAULT NULL,
+  `level` smallint(1) DEFAULT '1',
+  `clickable` smallint(1) DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `fk_parentid_idx` (`parent_id`),
+  CONSTRAINT `fk_parentid` FOREIGN KEY (`parent_id`) REFERENCES `bus classificator` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bus dimension` (
+  `id` varchar(20) NOT NULL,
+  `desc` varchar(50) DEFAULT NULL,
+  `default_visible` tinyint(1) DEFAULT NULL,
+  `searching_tag1` varchar(45) DEFAULT NULL,
+  `searching_tag2` varchar(45) DEFAULT NULL,
+  `searching_tag3` varchar(45) DEFAULT NULL,
+  `searching_tag4` varchar(45) DEFAULT NULL,
+  `searching_tag5` varchar(45) DEFAULT NULL,
+  `searching_tag6` varchar(45) DEFAULT NULL,
+  `searching_tag7` varchar(45) DEFAULT NULL,
+  `searching_tag8` varchar(45) DEFAULT NULL,
+  `searching_tag9` varchar(45) DEFAULT NULL,
+  `searching_tag10` varchar(45) DEFAULT NULL,
+  `searching_tag11` varchar(45) DEFAULT NULL,
+  `searching_tag12` varchar(45) DEFAULT NULL,
+  `searching_tag13` varchar(45) DEFAULT NULL,
+  `searching_tag14` varchar(45) DEFAULT NULL,
+  `searching_tag15` varchar(45) DEFAULT NULL,
+  `searching_tag16` varchar(45) DEFAULT NULL,
+  `searching_tag17` varchar(45) DEFAULT NULL,
+  `searching_tag18` varchar(45) DEFAULT NULL,
+  `searching_tag19` varchar(45) DEFAULT NULL,
+  `searching_tag20` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bus dimension relations` (
+  `bus_dimension_id` varchar(20) NOT NULL,
+  `bus_dimension_value_id` varchar(20) NOT NULL,
+  `table_name` varchar(45) NOT NULL,
+  `fld_name` varchar(250) NOT NULL,
+  PRIMARY KEY (`bus_dimension_id`,`bus_dimension_value_id`,`table_name`,`fld_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bus dimension value` (
+  `id` varchar(20) NOT NULL,
+  `dimension_id` varchar(20) DEFAULT NULL,
+  `desc` varchar(50) DEFAULT NULL,
+  `parent_id` varchar(20) DEFAULT NULL,
+  `level` varchar(45) DEFAULT NULL,
+  `type` varchar(10) DEFAULT NULL,
+  `min_val` int(11) DEFAULT NULL,
+  `max_val` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `bus event` (
+  `event_id` varchar(100) NOT NULL,
+  `component_id` varchar(100) NOT NULL,
+  `action_id` int(11) DEFAULT NULL,
+  `action_group_id` int(11) DEFAULT NULL,
+  `output_action_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`event_id`,`component_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bus filter defaults` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `filter_relations_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bus filter group` (
+  `id` varchar(50) NOT NULL,
+  `model_class` varchar(45) NOT NULL,
+  `control_type` varchar(45) DEFAULT NULL,
+  `caption` varchar(50) DEFAULT NULL,
+  `model_field` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`,`model_class`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bus filter item` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `model_field` varchar(45) DEFAULT NULL,
+  `type` varchar(45) DEFAULT NULL,
+  `filter_group_id` varchar(45) DEFAULT NULL,
+  `value` varchar(45) DEFAULT NULL,
+  `min_value` int(11) DEFAULT NULL,
+  `max_value` int(11) DEFAULT NULL,
+  `value_caption` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bus filter relations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `initiator_model_class` varchar(45) DEFAULT NULL,
+  `model_class_id` varchar(45) DEFAULT NULL,
+  `filtered_model_class` varchar(45) DEFAULT NULL,
+  `filter_item_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+CREATE TABLE `bus http req` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `context_path` varchar(45) DEFAULT NULL,
+  `content_type` varchar(45) DEFAULT NULL,
+  `local_addr` varchar(45) DEFAULT NULL,
+  `local_name` varchar(45) DEFAULT NULL,
+  `method` varchar(10) DEFAULT NULL,
+  `path_info` varchar(145) DEFAULT NULL,
+  `protocol` varchar(45) DEFAULT NULL,
+  `query_string` varchar(45) DEFAULT NULL,
+  `remote_addr` varchar(45) DEFAULT NULL,
+  `remote_host` varchar(45) DEFAULT NULL,
+  `remote_port` varchar(8) DEFAULT NULL,
+  `remote_user` varchar(25) DEFAULT NULL,
+  `server_name` varchar(45) DEFAULT NULL,
+  `server_port` varchar(8) DEFAULT NULL,
+  `request_url` varchar(245) DEFAULT NULL,
+  `incoming_datetime` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=240 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bus news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(250) DEFAULT NULL,
+  `body` varchar(4096) DEFAULT NULL,
+  `searching_tag1` varchar(45) DEFAULT NULL,
+  `searching_tag2` varchar(45) DEFAULT NULL,
+  `searching_tag3` varchar(45) DEFAULT NULL,
+  `searching_tag4` varchar(45) DEFAULT NULL,
+  `searching_tag5` varchar(45) DEFAULT NULL,
+  `searching_tag6` varchar(45) DEFAULT NULL,
+  `searching_tag7` varchar(45) DEFAULT NULL,
+  `searching_tag8` varchar(45) DEFAULT NULL,
+  `searching_tag9` varchar(45) DEFAULT NULL,
+  `searching_tag10` varchar(45) DEFAULT NULL,
+  `searching_tag11` varchar(45) DEFAULT NULL,
+  `searching_tag12` varchar(45) DEFAULT NULL,
+  `searching_tag13` varchar(45) DEFAULT NULL,
+  `searching_tag14` varchar(45) DEFAULT NULL,
+  `searching_tag15` varchar(45) DEFAULT NULL,
+  `searching_tag16` varchar(45) DEFAULT NULL,
+  `searching_tag17` varchar(45) DEFAULT NULL,
+  `searching_tag18` varchar(45) DEFAULT NULL,
+  `searching_tag19` varchar(45) DEFAULT NULL,
+  `searching_tag20` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bus read msg` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uuid` varchar(45) NOT NULL,
+  `service_role_from` varchar(45) DEFAULT NULL,
+  `service_id_from` varchar(45) DEFAULT NULL,
+  `service_role_to` varchar(45) DEFAULT NULL,
+  `service_id_to` varchar(45) DEFAULT NULL,
+  `header_value` varchar(45) DEFAULT NULL,
+  `body_value` varchar(4096) DEFAULT NULL,
+  `endpoint_id` varchar(45) DEFAULT NULL,
+  `outcoming_datetime` varchar(45) DEFAULT NULL,
+  `incoming_datetime` varchar(45) DEFAULT NULL,
+  `log_datetime` varchar(45) DEFAULT NULL,
+  `logger_id` varchar(100) DEFAULT NULL,
+  `method_handler` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=136 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bus reply msg` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uuid` varchar(45) DEFAULT NULL,
+  `response_uri` varchar(245) DEFAULT NULL,
+  `response_content_type` varchar(45) DEFAULT NULL,
+  `response_contract_class` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bus resp msg` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uuid` varchar(45) DEFAULT NULL,
+  `response_content_type` varchar(45) DEFAULT NULL,
+  `response_contract_class` varchar(45) DEFAULT NULL,
+  `service_role_from` varchar(45) DEFAULT NULL,
+  `service_role_to` varchar(45) DEFAULT NULL,
+  `service_id_from` varchar(45) DEFAULT NULL,
+  `service_id_to` varchar(45) DEFAULT NULL,
+  `header_value` varchar(45) DEFAULT NULL,
+  `body_value` varchar(4096) DEFAULT NULL,
+  `endpoint_id` varchar(45) DEFAULT NULL,
+  `outcoming_datetime` varchar(45) DEFAULT NULL,
+  `incoming_datetime` varchar(45) DEFAULT NULL,
+  `log_datetime` varchar(45) DEFAULT NULL,
+  `logger_id` varchar(100) DEFAULT NULL,
+  `method_handler` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bus sql param` (
+  `id` int(11) NOT NULL,
+  `parent_id` int(5) DEFAULT NULL,
+  `param` varchar(45) DEFAULT NULL,
+  `desc` varchar(150) DEFAULT NULL,
+  `type` varchar(45) DEFAULT NULL,
+  `sample` varchar(45) DEFAULT NULL,
+  `required` int(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `tag_idx` (`parent_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `bus sql template` (
+  `id` int(5) NOT NULL,
+  `desc` varchar(250) DEFAULT NULL,
+  `sql_template` varchar(4096) DEFAULT NULL,
+  `searching_tag1` varchar(45) DEFAULT NULL,
+  `searching_tag2` varchar(45) DEFAULT NULL,
+  `searching_tag3` varchar(45) DEFAULT NULL,
+  `searching_tag4` varchar(45) DEFAULT NULL,
+  `searching_tag5` varchar(45) DEFAULT NULL,
+  `searching_tag6` varchar(45) DEFAULT NULL,
+  `searching_tag7` varchar(45) DEFAULT NULL,
+  `searching_tag8` varchar(45) DEFAULT NULL,
+  `searching_tag9` varchar(45) DEFAULT NULL,
+  `searching_tag10` varchar(45) DEFAULT NULL,
+  `searching_tag11` varchar(45) DEFAULT NULL,
+  `searching_tag12` varchar(45) DEFAULT NULL,
+  `searching_tag13` varchar(45) DEFAULT NULL,
+  `searching_tag14` varchar(45) DEFAULT NULL,
+  `searching_tag15` varchar(45) DEFAULT NULL,
+  `searching_tag16` varchar(45) DEFAULT NULL,
+  `searching_tag17` varchar(45) DEFAULT NULL,
+  `searching_tag18` varchar(45) DEFAULT NULL,
+  `searching_tag19` varchar(45) DEFAULT NULL,
+  `searching_tag20` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bus tab` (
+  `id` varchar(40) NOT NULL,
+  `caption` varchar(45) DEFAULT NULL,
+  `searching_tag1` varchar(45) DEFAULT NULL,
+  `filter_model_class` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

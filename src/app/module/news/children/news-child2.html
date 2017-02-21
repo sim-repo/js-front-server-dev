@@ -1,0 +1,8 @@
+<div *ngIf="news">
+  <md-card>
+    <md-card-title class="secondary">Элемент 2</md-card-title>
+    <md-card-content>{{ news.name }}</md-card-content>
+    <md-card-actions align="end">
+      <button md-button color="secondary" (click)="back()">Back</button>
+    </md-card-actions>
+  </md-card>

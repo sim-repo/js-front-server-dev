@@ -1,0 +1,7 @@
+event_id,component_id,action_id,action_group_id,output_action_id
+event-filter-bus,BusinessComponent,5,1,NULL
+event-filter-dimension,DimensionCardComponent,5,1,NULL
+event-filter-news,NewsComponent,5,1,NULL
+event-reemit-sidenav,SidenavComponent,5,2,NULL
+event-refresh-news,NewsComponent,0,3,NULL
+event-refresh-sidenav,SidenavComponent,0,2,NULL

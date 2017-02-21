@@ -1,0 +1,176 @@
+$base: #cccccc;
+$light-base: #efefef;
+
+$table_font: #000000;
+$table-bkg-title1: #e5e5e5;
+$table-bkg-title2: #e0e0e0;
+
+$button: #DCDCDC;
+$button-font: #E91E63;
+
+$shadow1: #7a7a7a;
+
+
+$grid-font: #555;
+$cell-bkg: #F7F7F7;
+$cell-font: #555;
+
+
+$text: #555;
+$invalid: #E91E63;
+$width: 400px;
+$cubic: cubic-bezier(.64,.09,.08,1);
+
+$margin: 0.1%;
+$paddingX: 5%;
+$paddingY: 0;
+
+
+.rep-common-style{
+  font-size: medium;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  padding: $paddingY $paddingX;
+  .card-container {
+    display: flex;
+    flex-flow: row wrap;
+    md-card {
+      box-sizing: border-box;
+      margin: $margin $margin $margin $margin;
+      md-card-header {
+        color: $text;
+        background: linear-gradient($table-bkg-title1, $table-bkg-title2);
+        border-top: 1px solid $table-bkg-title2;
+        border-bottom: 1px solid $table-bkg-title2;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.48), 0 0px 0px rgba(0,0,0,0.05);
+        height: 30px;
+      }
+      md-grid-tile-header{
+        color: $text;
+        background: linear-gradient($table-bkg-title1, $table-bkg-title2);
+        border-top: 1px solid $table-bkg-title2;
+        border-bottom: 1px solid $table-bkg-title2;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.48), 0 0px 0px rgba(0,0,0,0.05);
+        height: 30px;
+      }
+      md-card-content{
+      }
+      a{
+        font-size: medium;
+       // color: white;
+      }
+    }
+    .md-card1{
+      flex-grow: 1;
+      height:10vw;
+      overflow-y: scroll;
+    }
+    .md-card2{
+      flex-grow: 1;
+      height:10vw;
+      overflow-y: scroll;
+    }
+    .md-card3{
+      flex-grow: 5;
+      width: 100%;
+    }
+  }
+}
+
+.grid{
+  color: $grid-font;
+}
+md-grid-tile{
+  background: $cell-bkg;
+}
+
+.cell{
+  a{color: $cell-font;}
+  position: absolute;
+  left: 5px;
+}
+
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  font: inherit;
+  transition: transform 0.3s ease-in-out,
+  font-size 0.5s ease-in-out,
+  visibility 0.3s ease-in-out;
+}
+
+input,
+textarea {
+  font: inherit;
+  font-size: medium;
+  margin: 5px 15px 10px;
+  width: $width;
+  display: block;
+  border: none;
+  padding: 5px 0 10px;
+  border-bottom: solid 1px $base;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, $base 4%);
+  background-position: -$width 0;
+  //background-size: $width 100%;
+  background-repeat: no-repeat;
+  transition: background 0.3s $cubic;
+  resize: none;
+  overflow: hidden;
+  &:focus::-webkit-input-placeholder {
+    color: $base;
+  }
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    background-position: 0 0;
+    &::-webkit-input-placeholder {
+      font-size: 0.8em;
+      transform: translateY(-20px);
+      visibility: visible !important;
+      opacity: 1;
+    }
+  }
+}
+
+
+.simple-button{
+  background-color: $button;
+  color: $button-font;
+  margin: $margin $margin $margin $margin;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.48), 0 2px 2px rgba(0,0,0,0.05);
+}
+
+
+
+::-webkit-scrollbar-button {
+  background-image:url('');
+  background-repeat:no-repeat;
+  width:5px;
+  height:0px
+}
+
+::-webkit-scrollbar-track {
+  background-color:#ecedee
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background-color:#FF80AB;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color:#FF80AB;
+}
+
+::-webkit-resizer{
+  background-image:url('');
+  background-repeat:no-repeat;
+  width:4px;
+  height:0px
+}
+
+::-webkit-scrollbar{
+  width: 4px;
+}

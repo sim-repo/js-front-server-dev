@@ -1,0 +1,22 @@
+1. Статический фильтр - позволяет автоматически "вспоминать" фильтрацию при возвращении к выбранному контролу (табу)
+<<<<<<< HEAD
+2. Добавить date picker для фильтрации.
+3. Разобраться почему делается одновременно второй повторный get-запрос при ленивой подгрузке модуля Business и
+	при выборе в табе меню Business каждый раз происходит пересоздание модуля с подгрузкой данных:
+
+	3.1. причина м.б. в роутинге внутри BusinessModule: 
+
+const routes2: Routes = [
+  { path: '',  component: BusinessComponent },
+  { path: 'business/:id', component: UserReportsComponent }
+];
+
+если подставить так, то проблему исчезают, но не подгружается вьюха BusinessComponent:
+const routes2: Routes = [
+  { path: 'business',  component: BusinessComponent },
+  { path: 'business/:id', component: UserReportsComponent }
+];
+Возможно нужно обновить webpack.
+=======
+2. Добавить date picker для фильтрации.
+>>>>>>> origin/master

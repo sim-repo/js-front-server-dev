@@ -10,11 +10,12 @@ import {News} from "../../../model/news";
 
 export class NewsChild1Component implements OnInit{
   news: News;
+
   constructor(private route: ActivatedRoute,
               private router: Router,
               private service: NewsService){}
 
-  ngOnInit() {
+  ngOnInit(){
     this.route.params
       .switchMap((params: Params) => this.service.getNewsById(+params['id']))
       .subscribe((news: News) => {this.news = news;});

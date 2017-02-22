@@ -24,7 +24,11 @@ import {AdminModule} from "./module/admin/admin.module";
 import {Broadcaster} from "./event/broadcaster";
 import {AnyEvent} from "./event/any.event";
 import {TabService} from "./tab/tab.service";
-import {BarchartComponent} from "./common/d3/barchart.component";
+import {SharedModule} from "./common/shared-module/shared.module";
+
+import {NgxChartsModule} from '@swimlane/ngx-charts';
+import {NgxBar} from "./common/ngx-charts/ngx-bar";
+
 
 
 @NgModule({
@@ -32,8 +36,7 @@ import {BarchartComponent} from "./common/d3/barchart.component";
     AppComponent,
     TabComponent,
     SidenavComponent,
-    PageNotFoundComponent,
-    BarchartComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,9 @@ import {BarchartComponent} from "./common/d3/barchart.component";
     ApiModule,
     BusinessModule,
     NewsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    NgxChartsModule
   ],
   providers: [
     HttpService,
@@ -70,7 +75,6 @@ export class AppModule {
     this.eagerLoading()}
 
   private eagerLoading(){
-
 
     this.loader.getData(BACKEND_URL_LIST[URLs.ACTIONS_GROUPS].url)
       .subscribe(

@@ -9,6 +9,8 @@ import {AdminService} from "./admin.service";
 import {HttpService} from "../../http/http.service";
 import {BACKEND_URL_LIST, URLs} from "../../http/link.const";
 import {MaterialModule} from "@angular/material";
+import {SharedModule} from "../../common/shared-module/shared.module";
+
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import {MaterialModule} from "@angular/material";
     FormsModule,
     ReactiveFormsModule,
     MaterialModule.forRoot(),
-    AdminRoutingModule
+    AdminRoutingModule,
+    SharedModule
   ],
   declarations:[
     AdminComponent,

@@ -1,0 +1,23 @@
+<!--
+<div class="col-md-3">
+
+  <canvas baseChart
+          [data]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [chartType]="lineChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+</div>
+-->
+<div class="col-md-3">
+  <canvas baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+  <button (click)="randomizeType()" style="display: inline-block">Toggle</button>
+</div>
+
+

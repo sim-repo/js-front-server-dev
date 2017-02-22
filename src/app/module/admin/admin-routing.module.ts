@@ -5,7 +5,7 @@ import {AdminChild1Component} from "./children/admin-child1.component";
 
 const routes: Routes = [
   { path: 'admin',  component: AdminComponent },
-  { path: 'admin/:id', component: AdminChild1Component }
+  { path: 'admin/one/:id', component: AdminChild1Component }
 ];
 
 @NgModule({

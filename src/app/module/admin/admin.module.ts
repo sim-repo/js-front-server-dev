@@ -10,6 +10,11 @@ import {HttpService} from "../../http/http.service";
 import {BACKEND_URL_LIST, URLs} from "../../http/link.const";
 import {MaterialModule} from "@angular/material";
 import {SharedModule} from "../../common/shared-module/shared.module";
+import {AdminChild2Component} from "./children/admin-child2.component";
+import {AdminChild3Component} from "./children/admin-child3.component";
+import {AdminChild4Component} from "./children/admin-child4.component";
+import {AdminJvmService} from "./children/admin-jvm-service";
+import {AdminJvmComponent} from "./children/admin-jvm.component";
 
 
 
@@ -18,21 +23,26 @@ import {SharedModule} from "../../common/shared-module/shared.module";
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     AdminRoutingModule,
     SharedModule
   ],
   declarations:[
     AdminComponent,
-    AdminChild1Component
+    AdminChild1Component,
+    AdminChild2Component,
+    AdminChild3Component,
+    AdminChild4Component,
+    AdminJvmComponent
   ],
-  providers:[AdminService]
+  providers:[AdminService,AdminJvmService]
 })
 
 export class AdminModule{
   errorMessage: string;
   constructor(private loader: HttpService,
-              private adminService: AdminService){
+              private adminService: AdminService
+              ){
     this.lazyLoading();
   }
 

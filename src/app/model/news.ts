@@ -2,7 +2,10 @@
 export class News{
   id: string;
   title: string;
+  subtitle: string;
   body: string;
+  link: string;
+  img_fullpath: string;
   searching_tag1: any;
   searching_tag2: any;
   searching_tag3: any;

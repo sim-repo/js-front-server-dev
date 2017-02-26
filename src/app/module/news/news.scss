@@ -10,7 +10,7 @@
     overflow-y: scroll;
     height:75vh;
     :hover{
-      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      box-shadow: 0 2px 4px rgba(244, 7, 122, 1), 0 1px 1px rgba(244, 7, 122, 1);
     }
     md-card {
       width: 400px;
@@ -19,7 +19,7 @@
       flex-grow: 1;
       transition: all 0.2s ease-in-out;
       :hover{
-        box-shadow: 0 0px 0px rgba(0,0,0,0.12), 0 0px 0px rgba(0,0,0,0.24);
+        box-shadow: 0 0px 0px rgba(216,18,244,0.72), 0 0px 0px rgba(0,0,0,0.24);
         transition: all 0.2s ease-in-out;
       }
       md-card-title {

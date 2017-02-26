@@ -14,6 +14,13 @@ export class HttpService{
       .catch(this.handleError);
   }
 
+  getSingle(_url: string):Observable<any>{
+    return this.http.get(_url)
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
+
   postJson(_url: string, _data: any): Observable<any>{
     let headers = new Headers({ 'Content-Type': 'application/json;charset=UTF-8' });
     let options = new RequestOptions({ headers: headers });

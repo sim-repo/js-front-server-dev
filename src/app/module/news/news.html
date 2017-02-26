@@ -1,12 +1,21 @@
-<div class="news-common-style">
+<div class="common-style">
   <div *ngIf="buffer">
-    <div *ngIf="news">
       <div class="card-container">
-        <md-card *ngFor="let n of buffer" [routerLink]="['/news/one/'+n.id]">
-          <md-card-title class="secondary">{{n.title}}</md-card-title>
+        <md-card *ngFor="let n of buffer" [routerLink]="[n.link+n.id]">
+
+          <md-card-header>
+            <img md-card-avatar src="../../assets/img/av.png" flex width="40">
+            <md-card-title>{{n.title}}</md-card-title>
+
+          </md-card-header>
+          <br>
+
+          <img md-card-image src={{n.img_fullpath}}>
           <router-outlet></router-outlet>
+          <md-card-footer>
+            {{n.subtitle}}
+          </md-card-footer>
         </md-card>
       </div>
-    </div>
   </div>
 </div>

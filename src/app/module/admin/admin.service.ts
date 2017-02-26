@@ -1,5 +1,5 @@
 import {Injectable, Input} from '@angular/core';
-import {Admin} from "../../model/admin";
+import {Admin} from "../../model/admin-model/admin";
 
 
 let adminPromise = Promise.resolve(this.reports);

@@ -27,7 +27,7 @@ import {TabService} from "./tab/tab.service";
 import {SharedModule} from "./common/shared-module/shared.module";
 
 import {NgxChartsModule} from '@swimlane/ngx-charts';
-import {NgxBar} from "./common/ngx-charts/ngx-bar";
+
 
 
 

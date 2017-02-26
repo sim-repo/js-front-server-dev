@@ -5,13 +5,13 @@ import {InMemoryService} from "../../memory/in-memory";
 import {Mediator} from "../../event/mediator";
 import {AdminService} from "./admin.service";
 import {MyEvent} from "../../model/my-event";
-import {Admin} from "../../model/admin";
+import {Admin} from "../../model/admin-model/admin";
 
 
 @Component({
   selector: 'my-admin',
   templateUrl:'./admin.html',
-  styleUrls: ['admin.scss'],
+  styleUrls: ['../../common/style/common.scss'],
 })
 
 export class AdminComponent  extends AComponent {
@@ -32,6 +32,7 @@ export class AdminComponent  extends AComponent {
   }
 
   protected assign(_event: MyEvent) {
+    console.log('catch');
     if (_event.model_class === 'Admin') {
       this.setOwnModel(_event.data);
     }

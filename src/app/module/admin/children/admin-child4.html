@@ -1,0 +1,27 @@
+
+<div class="admin-common-style">
+  <div class="card-container">
+    <div class="row">
+      <div class="col-md-3">
+        <simple-chart-example></simple-chart-example>
+      </div>
+
+      <div class="col-md-3">
+        <h-selection-event></h-selection-event>
+      </div>
+
+      <div class="col-md-3">
+        <h-dynamic></h-dynamic>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <h-highstock></h-highstock>
+      </div>
+      <div class="col-md-3">
+        <d3-barchart *ngIf="chartData" [data]="chartData"></d3-barchart>
+      </div>
+    </div>
+
+  </div>
+</div>

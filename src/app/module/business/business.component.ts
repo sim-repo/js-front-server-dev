@@ -10,7 +10,7 @@ import {Mediator} from "../../event/mediator";
 @Component({
   selector: 'my-business',
   templateUrl: './business.html',
-  styleUrls: ['business.scss'],
+  styleUrls: ['../../common/style/common.scss'],
 })
 
 export class BusinessComponent extends AComponent{

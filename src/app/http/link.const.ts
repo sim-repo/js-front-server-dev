@@ -1,7 +1,7 @@
 import {BackendURL} from "../model/backend-url";
 
-export const BACKEND_ROOT_LINK: String = 'http://localhost:8037/front/sync/get/json/log/';
-export const BACKEND_ROOT_LINK2: String = 'http://localhost:8037/front/sync/post/json/log/';
+export const BACKEND_ROOT_LINK: String = 'http://localhost:8080/front/sync/get/json/log/';
+export const BACKEND_ROOT_LINK2: String = 'http://localhost:8080/front/sync/post/json/log/';
 
 export enum URLs {
   NEWS = 0,
@@ -29,3 +29,14 @@ export const BACKEND_URL_LIST: BackendURL[] = [
   {id: 'admin', url: BACKEND_ROOT_LINK+'admin'},
 ]
 
+
+
+export const JOLOKIA_ROOT_LINK: String = 'http://localhost:8080/jolokia-war-1.3.5/read/';
+
+export enum JOLOKIA_URLs {
+  HEAP_MEMORY_USAGE = 0
+}
+
+export const JOLOKIA: BackendURL[] = [
+  {id: 'heap_memory_usage', url: JOLOKIA_ROOT_LINK+'java.lang:type=Memory/HeapMemoryUsage'}
+]

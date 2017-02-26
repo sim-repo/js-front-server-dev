@@ -74,15 +74,18 @@ export class UserReportsComponent implements OnInit{
       .subscribe(data=>this.fill(data))
   }
 
-  createForm(_report: UserReports){
+  createForm(_report: UserReports) {
     let group: any = {};
 
-    group[_report.sql_template] =  new FormControl(_report.sql_template || '');
-    _report.params
-      .forEach(p=>{
-        group[p.param_name] = p.required==1 ? new FormControl(p.sample, Validators.required)
-          : new FormControl(p.sample);
-      });
+    group[_report.sql_template] = new FormControl(_report.sql_template || '');
+    if (_report.params != undefined) {
+      _report.params
+        .forEach(p => {
+          group[p.param_name] = p.required == 1 ? new FormControl(p.sample, Validators.required)
+            : new FormControl(p.sample);
+        });
+      return new FormGroup(group);
+  }
     return new FormGroup(group);
   }
 

@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {ActivatedRoute, Router, Params} from "@angular/router";
 import {AdminService} from "../admin.service";
-import {Admin} from "../../../model/admin";
+import {Admin} from "../../../model/admin-model/admin";
 
 @Component({
   selector:'my-admin-child1',

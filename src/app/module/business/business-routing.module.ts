@@ -6,7 +6,7 @@ import {UserReportsComponent} from "./children/user-reports.component";
 
 const routes2: Routes = [
   { path: 'business',  component: BusinessComponent },
-  { path: 'business/:id', component: UserReportsComponent }
+  { path: 'business/one/:id', component: UserReportsComponent }
 ];
 
 @NgModule({

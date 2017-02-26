@@ -10,7 +10,7 @@ import {Mediator} from "../../event/mediator";
 @Component({
   selector:'my-news',
   templateUrl:'./news.html',
-  styleUrls: ['news.scss'],
+  styleUrls: ['../../common/style/common.scss'],
 })
 
 export class NewsComponent extends AComponent{

@@ -27,16 +27,19 @@ import {TabService} from "./tab/tab.service";
 import {SharedModule} from "./common/shared-module/shared.module";
 
 import {NgxChartsModule} from '@swimlane/ngx-charts';
-
-
-
+import {ConfirmDialog} from "./common/dialog/confirm-dialog.component";
+import {DialogsService} from "./common/dialog/confirm-dialog.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     TabComponent,
     SidenavComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ConfirmDialog,
+  ],
+  exports: [
+    ConfirmDialog,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +63,10 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
     InMemoryService,
     Mediator,
     TabService,
+    DialogsService,
+  ],
+  entryComponents: [
+    ConfirmDialog,
   ],
   bootstrap: [AppComponent]
 })

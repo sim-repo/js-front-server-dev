@@ -4,7 +4,7 @@ const http = require('http');
 const bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var users = require('./routes/user-model');
 
 var app = express();
 

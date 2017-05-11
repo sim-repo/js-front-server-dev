@@ -1,0 +1,90 @@
+<div class="inner-html-style">
+  <div *ngIf="apiItems">
+    <div class="card-container">
+      <md-card *ngFor="let n of buffer">
+
+        <md-card-header>
+          <img md-card-avatar src="../../assets/img/av.png" flex width="40">
+          <md-card-title>{{n.title}}</md-card-title>
+          <button md-button [routerLink]="['/api/edit/'+n.id]" class="flat-button"><i class="fa fa-pencil-square-o" ></i></button>
+          <button md-button (click)="openDialog(n)" class="flat-button"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </md-card-header>
+
+        <div *ngIf="n.html_any_xsmall">
+          <md-card-content>
+            <div class="inner-container">
+              <div [innerHTML]="n.html_any_xsmall | safe"></div>
+            </div>
+          </md-card-content>
+        </div>
+
+        <div *ngIf="n.html_any_small">
+          <md-card-content>
+            <div class="inner-container">
+              <div [innerHTML]="n.html_any_small | safe"></div>
+            </div>
+          </md-card-content>
+        </div>
+
+
+        <div *ngIf="n.subtitle">
+          <md-card-subtitle>источник: {{n.subtitle}}</md-card-subtitle>
+        </div>
+        <br>
+
+        <div *ngIf="n.src_endpoint_id">
+          <md-card-content>источник: {{n.src_endpoint_id}}</md-card-content>
+        </div>
+
+        <div *ngIf="n.html_src_output">
+          <md-card-content>
+            метод источника:<br>
+            <div class="inner-container">
+              <div [innerHTML]="n.html_src_output | safe"></div>
+            </div>
+          </md-card-content>
+        </div>
+
+        <div *ngIf="n.html_esb_ctrl">
+          <md-card-content>
+            esb url:<br>
+            <div class="inner-container">
+              <div [innerHTML]="n.html_esb_ctrl | safe"></div>
+            </div>
+          </md-card-content>
+        </div>
+
+        <div *ngIf="n.html_dst_input">
+          <md-card-content>
+            потребители:<br>
+            <div class="inner-container">
+              <div [innerHTML]="n.html_dst_input | safe"></div>
+            </div>
+          </md-card-content>
+        </div>
+
+        <div *ngIf="n.html_any_medium">
+          <md-card-content>
+            <div class="inner-container">
+              <div [innerHTML]="n.html_any_medium | safe"></div>
+            </div>
+          </md-card-content>
+        </div>
+
+        <div *ngIf="n.html_any_big">
+          <md-card-content>
+            <div class="inner-container">
+              <div [innerHTML]="n.html_any_big | safe"></div>
+            </div>
+          </md-card-content>
+        </div>
+
+        <router-outlet></router-outlet>
+        <md-card-footer>
+        </md-card-footer>
+      </md-card>
+    </div>
+  </div>
+</div>
+
+

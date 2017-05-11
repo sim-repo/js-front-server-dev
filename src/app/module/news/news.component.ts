@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {News} from "../../model/news";
+import {News} from "../../model/news-model/news";
 import {NewsService} from "./news.service";
 import {InMemoryService} from "../../memory/in-memory";
 import {MyEvent} from "../../model/my-event";

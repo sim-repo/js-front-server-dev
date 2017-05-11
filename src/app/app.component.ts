@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {DialogsService} from "./common/dialog/confirm-dialog.service";
 
 
 @Component({
@@ -9,8 +10,7 @@ import {Component} from '@angular/core';
 export class AppComponent {
   private chartData: Array<any>;
 
-
-  constructor() {}
+  constructor(private dialogsService: DialogsService) {}
 
   ngOnInit() {
     // give everything a chance to get loaded before starting the animation to reduce choppiness
@@ -21,6 +21,13 @@ export class AppComponent {
       setInterval(() => this.generateData(), 3000);
     }, 1000);
   }
+
+  openDialog(item) {
+    this.dialogsService
+      .confirm('Вход в систему', 'Вы уверены, что хотите продолжить?')
+      .subscribe(yes => {if(yes){ }});
+  }
+
 
   generateData() {
     this.chartData = [];

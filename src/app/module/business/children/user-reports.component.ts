@@ -1,4 +1,4 @@
-import {Component, OnInit, ChangeDetectionStrategy} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 import {UserReports} from "../../../model/user-reports";
@@ -22,7 +22,6 @@ export class UserReportsComponent implements OnInit{
   gridFilter:GridFilter;
   sortCol: number = undefined;
   sortAsc: boolean = true;
-
 
   public totalItems: number = 0;
   public currentPage: number = 1;
@@ -64,12 +63,13 @@ export class UserReportsComponent implements OnInit{
     r.tag = this.report.id+'';
     r.items = [];
 
-    for(var i=0,len=this.report.params.length; i<len;i++){
-      let obj = Object.create(null);
-      obj['param'] =this.report.params[i].param_name
-      obj['val'] = this.report.params[i].value;
-      r.items.push(obj);
-    }
+    if(this.report.params != null)
+      for(var i=0,len=this.report.params.length; i<len;i++){
+        let obj = Object.create(null);
+        obj['param'] =this.report.params[i].param_name
+        obj['val'] = this.report.params[i].value;
+        r.items.push(obj);
+      }
     this.loader.postJson(BACKEND_URL_LIST[URLs.USER_POST_REPORT].url, r)
       .subscribe(data=>this.fill(data))
   }

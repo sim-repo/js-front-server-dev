@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {Router, ActivatedRoute, Params} from "@angular/router";
 import {NewsService} from "../news.service";
-import {News} from "../../../model/news";
+import {News} from "../../../model/news-model/news";
 
 @Component({
   selector: 'my-business-child1',

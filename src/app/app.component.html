@@ -1,15 +1,28 @@
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Electrolize|Roboto:400' rel='stylesheet' type='text/css'>
+
+
 <md-sidenav-container fullscreen >
 
   <md-toolbar class="app-md-toolbar">
 
+    <div layout="row" layout-align="start center">
+      <div layout="row" flex><br></div>
+      <div layout="row" flex><br></div>
+      <div layout="row" flex>
       <button md-icon-button (click)="sidenav.toggle()">
         <i class="material-icons md-24 md-pink">menu</i>
       </button>
+
       <img src="../assets/img/logo.png" alt="Responsive image"/>
 
       <span class="app-toolbar-filler"></span>
-      <span> <img src="../assets/img/toolbar-wave3.jpg" width="800" height="180"/></span>
-
+      <span><button md-icon-button (click)="openDialog(n)">
+        <i class="material-icons md-24 md-pink">menu</i>
+      </button></span>
+      </div>
+      <!--<span> <img src="../assets/img/toolbar-wave1.jpg" width="800" height="180"/></span>-->
+    </div>
 
   </md-toolbar>
 
@@ -20,9 +33,5 @@
   <span class="app-content">
     <my-tab></my-tab>
   </span>
-
-
-  <md-toolbar class="app-md-toolbar-footer"></md-toolbar>
-
-
+  <!--  <md-toolbar class="app-md-toolbar-footer"></md-toolbar> -->
 </md-sidenav-container>

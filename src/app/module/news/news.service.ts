@@ -1,5 +1,5 @@
 import {Injectable, Input} from '@angular/core';
-import {News} from "../../model/news";
+import {News} from "../../model/news-model/news";
 
 let newsPromise = Promise.resolve(this.news);
 

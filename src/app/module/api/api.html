@@ -1,0 +1,24 @@
+<button md-button [routerLink]="['/api/add/editor']" class="flat-button"><i class="fa fa-plus-square-o" aria-hidden="true"></i></button>
+
+<div class="common-style">
+  <div *ngIf="buffer">
+    <div class="card-container">
+      <md-card *ngFor="let n of buffer"
+               [routerLink]="['/api/item/'+n.link]"
+               (click)="emitByAction(2,0,'ApiItem', n);">
+
+        <md-card-header>
+          <img md-card-avatar src="../../assets/img/av.png" flex width="40">
+          <md-card-title>{{n.title}}</md-card-title>
+        </md-card-header>
+        <br>
+
+        <img md-card-image src={{n.img_fullpath}}>
+        <router-outlet></router-outlet>
+        <md-card-footer>
+          {{n.subtitle}}
+        </md-card-footer>
+      </md-card>
+    </div>
+  </div>
+</div>

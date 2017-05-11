@@ -36,7 +36,7 @@ export class PaginatePipe implements PipeTransform {
 
 @Pipe({
   name: "sort",
-   pure: false
+  pure: false
 })
 export class SortPipe implements PipeTransform {
 
@@ -53,7 +53,20 @@ export class SortPipe implements PipeTransform {
       return orderType ? (ae.toString().toLowerCase() > be.toString().toLowerCase() ? -1 : 1) : (be.toString().toLowerCase() > ae.toString().toLowerCase() ? -1 : 1);
     } );
 
-
     return array.slice(0,array.length);
+  }
+}
+
+
+
+
+import { DomSanitizer, SafeHtml, SafeStyle, SafeScript, SafeUrl, SafeResourceUrl } from '@angular/platform-browser';
+
+@Pipe({ name: 'safe' })
+export class SafePipe implements PipeTransform{
+
+  constructor(protected _sanitizer: DomSanitizer) {}
+  public transform(url):SafeHtml{
+    return this._sanitizer.bypassSecurityTrustHtml(url);
   }
 }

@@ -1,0 +1,192 @@
+<button md-button (click)="back()" class="simple-button"><i class="fa fa-arrow-circle-left"></i></button>
+<button md-button (click)="add(data )" class="simple-button"><i class="fa fa-floppy-o" aria-hidden="true"></i>{{saveResult}}</button>{{err}}
+
+
+<div class="horizontal-style">
+  <md-card>
+
+
+
+
+      <form (ngSubmit)="onSubmit()" [formGroup]="form">
+
+
+        <md-select formControlName='data.src_endpoint_id'  name="countryString"  placeholder="Источник данных:"
+                   md-container-class="mySelect"
+                   [(ngModel)]="data.src_endpoint_id"
+                   [(ngModel)]="data.searching_tag1">
+          <md-option [value]="'btx'">btx</md-option>
+          <md-option [value]="'NAV'">nav</md-option>
+          <md-option [value]="'one'">1C</md-option>
+          <md-option [value]="'crm'">crm</md-option>
+          <md-option [value]="'oktell'">oktell</md-option>
+          <md-option [value]="'dxbx'">dxbx</md-option>
+          <md-option [value]="'isimple'">isimple</md-option>
+        </md-select>
+
+        <input formControlName='data.title' type="text" placeholder="заголовок" [(ngModel)]="data.title" value="{{data.title}}">
+        <input formControlName='data.top_priority' type="number" placeholder="приоритет top-вывода" [(ngModel)]="data.top_priority" min="0">
+
+        <div class="mini-container">
+          <md-card>
+              <md-select formControlName='data.searching_tag2'  name="countryString"  placeholder="Приемник данных #1:"
+                         [(ngModel)]="data.searching_tag2">
+                <md-option [value]="'btx'" style="color: #56999f">btx</md-option>
+                <md-option [value]="'NAV'">nav</md-option>
+                <md-option [value]="'one'">1C</md-option>
+                <md-option [value]="'crm'">crm</md-option>
+                <md-option [value]="'oktell'">oktell</md-option>
+                <md-option [value]="'dxbx'">dxbx</md-option>
+                <md-option [value]="'isimple'">isimple</md-option>
+                <md-option [value]="null">isimple</md-option>
+              </md-select>
+
+              <md-select formControlName='data.searching_tag3'  name="countryString"  placeholder="Приемник данных #2:"
+                         [(ngModel)]="data.searching_tag3">
+                <md-option [value]="'btx'">btx</md-option>
+                <md-option [value]="'NAV'">nav</md-option>
+                <md-option [value]="'one'">1C</md-option>
+                <md-option [value]="'crm'">crm</md-option>
+                <md-option [value]="'oktell'">oktell</md-option>
+                <md-option [value]="'dxbx'">dxbx</md-option>
+                <md-option [value]="'isimple'">isimple</md-option>
+              </md-select>
+
+          </md-card>
+          <md-card>
+            <md-card-content>
+              <md-select formControlName='data.searching_tag4'  name="countryString"  placeholder="Приемник данных #3:"
+                         [(ngModel)]="data.searching_tag4">
+                <md-option [value]="'btx'">btx</md-option>
+                <md-option [value]="'NAV'">nav</md-option>
+                <md-option [value]="'one'">1C</md-option>
+                <md-option [value]="'crm'">crm</md-option>
+                <md-option [value]="'oktell'">oktell</md-option>
+                <md-option [value]="'dxbx'">dxbx</md-option>
+                <md-option [value]="'isimple'">isimple</md-option>
+              </md-select>
+
+              <md-select formControlName='data.searching_tag5'  name="countryString"  placeholder="Приемник данных #4:"
+                         [(ngModel)]="data.searching_tag5">
+                <md-option [value]="'btx'">btx</md-option>
+                <md-option [value]="'NAV'">nav</md-option>
+                <md-option [value]="'one'">1C</md-option>
+                <md-option [value]="'crm'">crm</md-option>
+                <md-option [value]="'oktell'">oktell</md-option>
+                <md-option [value]="'dxbx'">dxbx</md-option>
+                <md-option [value]="'isimple'">isimple</md-option>
+              </md-select>
+            </md-card-content>
+          </md-card>
+          <md-card>
+            <md-card-content>
+              <md-select formControlName='data.searching_tag6'  name="countryString"  placeholder="Приемник данных #5:"
+                         [(ngModel)]="data.searching_tag6">
+                <md-option [value]="'btx'">btx</md-option>
+                <md-option [value]="'NAV'">nav</md-option>
+                <md-option [value]="'one'">1C</md-option>
+                <md-option [value]="'crm'">crm</md-option>
+                <md-option [value]="'oktell'">oktell</md-option>
+                <md-option [value]="'dxbx'">dxbx</md-option>
+                <md-option [value]="'isimple'">isimple</md-option>
+              </md-select>
+
+              <md-select formControlName='data.searching_tag7'  name="countryString"  placeholder="Приемник данных #6:"
+                         [(ngModel)]="data.searching_tag7">
+                <md-option [value]="'btx'">btx</md-option>
+                <md-option [value]="'NAV'">nav</md-option>
+                <md-option [value]="'one'">1C</md-option>
+                <md-option [value]="'crm'">crm</md-option>
+                <md-option [value]="'oktell'">oktell</md-option>
+                <md-option [value]="'dxbx'">dxbx</md-option>
+                <md-option [value]="'isimple'">isimple</md-option>
+              </md-select>
+            </md-card-content>
+          </md-card>
+        </div>
+
+        <div class="card-container">
+          <md-card>
+            ИСТОЧНИК, интерфейс:<br>
+            <textarea formControlName='data.html_src_output'
+                      placeholder="добавь html код.."
+                      cols="200" rows="10"
+                      [(ngModel)]="data.html_src_output">
+            </textarea>
+          </md-card>
+
+          <md-card>
+            ESB, интерфейс: <br>
+            <textarea formControlName='data.html_esb_ctrl'
+                      placeholder="добавь html код.."
+                      cols="200" rows="10"
+                      [(ngModel)]="data.html_esb_ctrl">
+            </textarea>
+          </md-card>
+
+          <md-card>
+            ПРИЕМНИК, интерфейс: <br>
+            <textarea formControlName='data.html_dst_input'
+                      placeholder="добавь html код.."
+                      cols="200" rows="10"
+                      [(ngModel)]="data.html_dst_input">
+            </textarea>
+          </md-card>
+
+          <md-card>
+            ПРИЕМНИК, ответ: <br>
+            <textarea formControlName='data.html_dst_reply'
+                      placeholder="добавь html код.."
+                      cols="200" rows="10"
+                      [(ngModel)]="data.html_dst_reply">
+            </textarea>
+          </md-card>
+
+          <md-card>
+            Малый текст:<br>
+            <textarea formControlName='data.html_any_small'
+                      placeholder="добавь html код.."
+                      cols="200" rows="10"
+                      [(ngModel)]="data.html_any_small">
+            </textarea>
+          </md-card>
+
+          <md-card>
+            Очень малый текст:<br>
+            <textarea formControlName='data.html_any_xsmall'
+                      placeholder="добавь html код.."
+                      cols="200" rows="10"
+                      [(ngModel)]="data.html_any_xsmall">
+            </textarea>
+          </md-card>
+
+          <md-card>
+            Средний текст:<br>
+            <textarea formControlName='data.html_any_medium'
+                      placeholder="добавь html код.."
+                      cols="200" rows="10"
+                      [(ngModel)]="data.html_any_medium">
+            </textarea>
+          </md-card>
+
+          <md-card>
+            Большой текст: <br>
+            <textarea formControlName='data.html_any_big'
+                      placeholder="добавь html код.."
+                      cols="200" rows="10"
+                      [(ngModel)]="data.html_any_big">
+            </textarea>
+          </md-card>
+
+
+
+
+        </div>
+      </form>
+
+
+
+
+  </md-card>
+</div>
+

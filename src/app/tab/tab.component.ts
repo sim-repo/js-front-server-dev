@@ -29,7 +29,7 @@ export class TabComponent extends AComponent{
 
   protected assign(_event: MyEvent){
     this.selectedFilters = this.inmemory.getFiltersByModel(_event.model_class);
-    //?>>
+
     if (_event.model_class === 'Tab') {
       this.setOwnModel(_event.data);
     }

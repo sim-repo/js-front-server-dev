@@ -1,9 +1,10 @@
-import {SqlParam} from "./sql-param";
+import {SqlParam} from "./rep-model/sql-param";
 
 export class UserReports{
   id: number;
   desc: string;
   sql_template: string;
+  link: string;
   searching_tag1: any;
   searching_tag2: any;
   searching_tag3: any;

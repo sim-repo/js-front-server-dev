@@ -26,7 +26,7 @@ md-sidenav-layout.m2app-dark {
 }
 
 .app-md-toolbar{
-  background: linear-gradient(#b7b7b7, #b7b7b7);
+  background: linear-gradient(#ececec, #b7b7b7);
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0,0,0,0.48), 0 0px 0px rgba(0,0,0,0.05);
   height: 10vh;
@@ -98,17 +98,16 @@ md-sidenav-layout.m2app-dark {
 
 .app-menu-font{
   color: #757575;
-  font-family: Roboto;
+  font-family: 'Electrolize', sans-serif;
   font-style: normal;
-  font-size: x-large;
+  font-size: large;
 }
 
 .app-menu-item-font{
    color: #9E9E9E;
-   font-style: italic;
+   font-size: small;
+   font-family: 'Electrolize', sans-serif;
 }
-
-
 
 
 .material-icons.md-18 { font-size: 18px; }
@@ -130,4 +129,9 @@ md-sidenav-layout.m2app-dark {
 .material-icons.md-pink { color: #ff4ccb }
 
 
-
+.simple-button{
+  background-color: white;
+  color: #e7e6e3;
+  margin: 0.1% 0.1% 0.1% 0.1%;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.48), 0 2px 2px rgba(0,0,0,0.05);
+}

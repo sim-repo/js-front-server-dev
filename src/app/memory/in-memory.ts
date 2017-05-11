@@ -9,17 +9,20 @@ import {MyFilterGroup} from "../model/my-filter-group";
 import {MyFilterRelations} from "../model/my-filter-relations";
 import {MyFilterItem} from "../model/my-filter-item";
 import {Tab} from "../model/tab";
+import {ApiEditor} from "../model/api-model/ApiEditor";
+import {User} from "../model/user-model/user";
 
 @Injectable()
 export class InMemoryService{
   tab: Tab[];
+  user: User;
   agroups: ActionGroup[];
   actions: Action[];
   events: EventRegistry[];
   fgroups: MyFilterGroup[];
   fitems: Map<any,MyFilterItem> = new Map<number,MyFilterItem>();
   frelations: MyFilterRelations[];
-
+  apiEdit = new ApiEditor();
 
   public isSubscribed(_event: MyEvent, _componentId: string): boolean{
     let arr = this.events.filter(event=>{if(event.event_id==_event.event_id && event.component_id==_componentId) return true});
@@ -36,6 +39,14 @@ export class InMemoryService{
 
   public getFiltersByModel(_modelId: string): MyFilterGroup[] {
     return this.fgroups.filter(f => {if (f.model_class == _modelId) return true});
+  }
+
+  public setApiEdit(api: ApiEditor){
+    this.apiEdit = api;
+  }
+
+  public getApiEdit(): ApiEditor{
+    return this.apiEdit;
   }
 
   public getFiltersByRelations(_modelId: string, _model: any): Set<MyFilterItem>{

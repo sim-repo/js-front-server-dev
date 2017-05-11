@@ -54,6 +54,8 @@ export abstract class AComponent{
 
 
   private isTarget(_value: any,_filter: MyFilterItem):boolean{
+    if(_value==undefined)
+      return;
     let val = (isNull(_value) ? null : _value.toLowerCase());
     switch(_filter.type){
       case 'checkbox': return val == _filter.value.toLowerCase();

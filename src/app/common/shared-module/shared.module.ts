@@ -42,7 +42,6 @@ import {D3BarchartComponent} from "../charts/d3/barchart.component";
     PolarAreaChartDemoComponent,
     RadarChartDemoComponent,
 
-
     NgxBarVertical,
     NgxBarHorizontal,
     NgxBarGroupedVertical,
@@ -71,10 +70,11 @@ import {D3BarchartComponent} from "../charts/d3/barchart.component";
     HttpModule,
     ChartsModule,
     NgxChartsModule,
-    ChartModule.forRoot(
-      require('../../../../node_modules/highcharts/highstock.src'),
-      require('../../../../node_modules/highcharts/highcharts-3d.src.js')
-    )
+    ChartModule
+   // ChartModule.forRoot(
+    //  require('../../../../node_modules/highcharts/highstock.src'),
+     // require('../../../../node_modules/highcharts/highcharts-3d.src.js')
+   // )
   ],
   exports: [
     LineChartDemoComponent,

@@ -1,3 +1,15 @@
+$button: #f9f9f9;
+$button-font: #f95475;
+
+$global-left-margin: 50px;
+
+$x-margin: 1px;
+$y-margin: 20px;
+$x2-margin: 20px;
+$y2-margin: 20px;
+$padding: 2%;
+
+
 
 .common-style{
   font-family: sans-serif;
@@ -8,6 +20,7 @@
     display: flex;
     flex-flow: row wrap;
     overflow-y: scroll;
+    margin-left: $global-left-margin;
     height:75vh;
     :hover{
       box-shadow: 0 2px 4px rgba(244, 7, 122, 1), 0 1px 1px rgba(244, 7, 122, 1);
@@ -15,10 +28,11 @@
     md-card {
       width: 300px;
       max-width: 300px;
-      min-height: 400px;
+      min-height: 200px;
       max-height: 400px;
       box-sizing: border-box;
-      margin: 16px;
+      margin: $x-margin $y-margin $x2-margin $y-margin;
+      padding: $padding;
       flex-grow: 1;
       transition: all 0.2s ease-in-out;
       :hover{
@@ -29,10 +43,58 @@
         font-size: small;
       }
       md-card-content{
-        font-size: small;
+        font-size: xx-small;
       }
       a{
-        font-size: x-small;
+        font-size: xx-small;
+      }
+    }
+  }
+}
+
+.horizontal-style{
+  font-family: sans-serif;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  .card-container {
+    display: flex;
+    flex-flow: row wrap;
+    overflow-y: scroll;
+    height:75vh;
+
+    md-card {
+      width: 800px;
+      max-width: 800px;
+      min-height: 200px;
+      max-height: 400px;
+      box-sizing: border-box;
+      margin: $x-margin $y-margin $x2-margin $y-margin;
+      flex-grow: 1;
+      transition: all 0.2s ease-in-out;
+      padding: $padding;
+      md-card-title {
+        font-size: small;
+        color: #4b4b4b;
+        font-family: "Roboto";
+        font-weight: 500;
+        text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+        10px 20px 5px rgba(0,0,0,0.05),
+        -10px 20px 5px rgba(0,0,0,0.05);
+
+      }
+      md-card-content{
+        color: #656565;
+        font-size: small;
+        font-family: "Roboto";
+        font-weight: 500;
+        text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+        10px 20px 5px rgba(0,0,0,0.05),
+        -10px 20px 5px rgba(0,0,0,0.05);
+
+      }
+      a{
+        font-size: xx-small;
       }
     }
   }
@@ -41,8 +103,83 @@
 
 
 
+
+.inner-html-style{
+  font-family: sans-serif;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  .card-container {
+    display: flex;
+    flex-flow: row wrap;
+    overflow-y: scroll;
+    height:75vh;
+
+    md-card {
+      box-sizing: border-box;
+      margin: $x-margin $y-margin;
+      flex-grow: 1;
+      transition: all 0.2s ease-in-out;
+      md-card-title {
+        font-size: medium;
+        color: #4b4b4b;
+        font-family: "Roboto";
+        font-weight: 500;
+        text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+        10px 20px 5px rgba(0,0,0,0.05),
+        -10px 20px 5px rgba(0,0,0,0.05);
+
+      }
+      md-card-content{
+        color: #656565;
+        font-size: small;
+        font-family: "Roboto";
+        font-weight: 500;
+        text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+        10px 20px 5px rgba(0,0,0,0.05),
+        -10px 20px 5px rgba(0,0,0,0.05);
+      }
+      .inner-container {
+        display: inline-block;
+        min-height: 40px;
+        max-height: 1000px;
+        min-width: 50px;
+        max-width: 1600px;
+
+        border-radius: 2px;
+        padding: 0px 0px;
+        box-sizing: border-box;
+        vertical-align: top;
+        overflow: auto;
+      }
+
+      a{
+        font-size: x-small;
+      }
+    }
+  }
+}
+
+
+.simple-button {
+  background-color: $button;
+  color: $button-font;
+  margin: $x-margin $y-margin;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.48), 0 2px 2px rgba(0, 0, 0, 0.05);
+  padding: $padding $padding $padding $padding;
+}
+
+.flat-button {
+
+  align-items: center;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  margin: 5px $x-margin;
+}
+
+
 ::-webkit-scrollbar-button {
-  background-image:url('');
+  //background-image:url('');
   background-repeat:no-repeat;
   width:15px;
   height:0px
@@ -63,7 +200,7 @@
 }
 
 ::-webkit-resizer{
-  background-image:url('');
+  //background-image:url('');
   background-repeat:no-repeat;
   width:4px;
   height:0px

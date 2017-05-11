@@ -13,7 +13,6 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "^1.0.0-beta.32.3",
     "@angular/common": "^2.3.1",
     "@angular/compiler": "^2.3.1",
     "@angular/core": "^2.3.1",
@@ -26,6 +25,7 @@
     "@angular/router": "^3.3.1",
     "@swimlane/ngx-charts": "^4.1.2",
     "angular2-highcharts": "^0.5.5",
+    "angular2-uuid": "^1.1.1",
     "chart.js": "^2.5.0",
     "core-js": "^2.4.1",
     "d3": "^4.6.0",
@@ -38,11 +38,11 @@
     "zone.js": "^0.7.2"
   },
   "devDependencies": {
+    "@angular/cli": "^1.0.1",
     "@angular/compiler-cli": "^2.3.1",
     "@types/d3": "^4.5.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
-    "angular-cli": "1.0.0-beta.24",
     "codelyzer": "~2.0.0-beta.1",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "2.5.0",

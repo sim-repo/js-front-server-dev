@@ -10,11 +10,9 @@ $button-font: #E91E63;
 
 $shadow1: #7a7a7a;
 
-
 $grid-font: #555;
 $cell-bkg: #F7F7F7;
 $cell-font: #555;
-
 
 $text: #555;
 $invalid: #E91E63;
@@ -27,7 +25,7 @@ $paddingY: 0;
 
 
 .rep-common-style{
-  font-size: medium;
+  font-size: small;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
@@ -57,7 +55,7 @@ $paddingY: 0;
       md-card-content{
       }
       a{
-        font-size: medium;
+        font-size: small;
        // color: white;
       }
     }
@@ -86,9 +84,12 @@ md-grid-tile{
 }
 
 .cell{
-  a{color: $cell-font;}
+  a{
+    color: $cell-font;
+  }
   position: absolute;
   left: 5px;
+  font-size: x-small;
 }
 
 
@@ -103,8 +104,8 @@ textarea::-webkit-input-placeholder {
 input,
 textarea {
   font: inherit;
-  font-size: medium;
-  margin: 5px 15px 10px;
+  font-size: small;
+  margin: 5px 10px 7px;
   width: $width;
   display: block;
   border: none;
@@ -134,17 +135,10 @@ textarea {
 }
 
 
-.simple-button{
-  background-color: $button;
-  color: $button-font;
-  margin: $margin $margin $margin $margin;
-  box-shadow: 0 2px 2px rgba(0,0,0,0.48), 0 2px 2px rgba(0,0,0,0.05);
-}
-
 
 
 ::-webkit-scrollbar-button {
-  background-image:url('');
+  //background-image:url('');
   background-repeat:no-repeat;
   width:5px;
   height:0px
@@ -165,7 +159,7 @@ textarea {
 }
 
 ::-webkit-resizer{
-  background-image:url('');
+ // background-image:url('');
   background-repeat:no-repeat;
   width:4px;
   height:0px
@@ -173,4 +167,13 @@ textarea {
 
 ::-webkit-scrollbar{
   width: 4px;
+}
+
+
+
+.simple-button{
+  background-color: $button;
+  color: $button-font;
+  margin: $margin $margin $margin $margin;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.48), 0 2px 2px rgba(0,0,0,0.05);
 }
